@@ -37,7 +37,7 @@ routeRouter.get('/last', (_req, res) => {
     })
 })
 
-routeRouter.get('/:user', (req, res) => {
+routeRouter.get('/user/:user', (req, res) => {
   RouteModel.find({ 'user': req.params.user })
     .then((routes: string[]) => {
       res.json(routes)
