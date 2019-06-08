@@ -38,7 +38,7 @@ favoriteRouter.get('/last', (_req, res) => {
 })
 
 // ユーザーごとのデータ取得
-favoriteRouter.get('/:user', (req, res) => {
+favoriteRouter.get('/user/:user', (req, res) => {
   FavoriteModel.find({ 'user': req.params.user })
     .then((favorites: string[]) => {
       res.json(favorites)
