@@ -31,8 +31,8 @@ favoriteRouter.get('/', (_req, res) => {
 })
 
 favoriteRouter.get('/last', (_req, res) => {
-  FavoriteModel.find()
+  FavoriteModel.find().limit(1).sort({ $natural: -1 })
     .then((favorites: string[]) => {
-      res.json(favorites[favorites.length - 1])
+      res.json(favorites)
     })
 })
