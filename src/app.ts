@@ -13,4 +13,7 @@ const port = 3000
 
 app.get('/', (req, res) => res.send('Hello Express'))
 
+import {favoriteRouter} from './favorite'
+app.use('/favorite', favoriteRouter)
+
 app.listen(port, () => console.log(`Server Up.`))
