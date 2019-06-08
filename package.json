@@ -20,6 +20,6 @@
     "dev": "nodemon",
     "start": "ts-node ./src/app.ts",
     "lint": "standard ./src/**/*.ts",
-    "deploy": "now alias"
+    "deploy": "now; now alias"
   }
 }
