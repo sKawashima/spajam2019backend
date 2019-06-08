@@ -29,3 +29,10 @@ favoriteRouter.get('/', (_req, res) => {
       res.json(favorites)
     })
 })
+
+favoriteRouter.get('/last', (_req, res) => {
+  FavoriteModel.find()
+    .then((favorites: string[]) => {
+      res.json(favorites[favorites.length - 1])
+    })
+})
