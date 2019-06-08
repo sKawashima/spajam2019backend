@@ -7,4 +7,4 @@ const FavoriteSchema = new mongoose.Schema({
   date: Date
 })
 
-export const FavoriteModel = mongoose.model('FavoriteModel', FavoriteSchema)
+export const FavoriteModel:any = mongoose.model('FavoriteModel', FavoriteSchema)

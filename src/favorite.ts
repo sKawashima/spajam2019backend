@@ -1,13 +1,10 @@
 import * as express from 'express'
 export const favoriteRouter = express.Router()
 
-favoriteRouter.get('/', (_req, res) => {
-  res.send('This is favorite API.')
-})
-
 import { FavoriteModel } from './model/favoriteModel'
+
 favoriteRouter.post('/', (req,res) => {
-  const Favorite:any = new FavoriteModel()
+  const Favorite = new FavoriteModel()
 
   Favorite.user = req.query.user
   Favorite.longitude = req.query.longitude
@@ -24,4 +21,11 @@ favoriteRouter.post('/', (req,res) => {
       })
     }
   })
+})
+
+favoriteRouter.get('/', (_req, res) => {
+  FavoriteModel.find()
+    .then((favorites: string[]) => {
+      res.json(favorites)
+    })
 })
