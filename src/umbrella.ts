@@ -42,3 +42,10 @@ umbrellaRouter.get('/umbrella/:umbrella', (req, res) => {
       res.json(umbrellas)
     })
 })
+
+umbrellaRouter.get('/last', (_req, res) => {
+  UmbrellaModel.find({"umbrella": 1}).limit(1).sort({ $natural: -1 })
+    .then((umbrella: string[]) => {
+      res.render('index',{user: umbrella[0]['user']})
+    })
+})
