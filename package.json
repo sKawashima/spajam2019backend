@@ -1,0 +1,18 @@
+{
+  "name": "spajam2019backend",
+  "version": "1.0.0",
+  "main": "src/app.ts",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "standard": "^12.0.1",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.5.1"
+  },
+  "scripts": {
+    "dev": "nodemon",
+    "start": "ts-node ./src/app.ts",
+    "lint": "standard ./src/**/*.ts"
+  }
+}
