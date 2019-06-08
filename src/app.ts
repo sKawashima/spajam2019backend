@@ -14,10 +14,10 @@ const port = 3000
 
 app.get('/', (req, res) => res.send('Hello Express'))
 
-import {favoriteRouter} from './favorite'
+import { favoriteRouter } from './favorite'
 app.use('/favorite', favoriteRouter)
 
-import {routeRouter} from './route'
+import { routeRouter } from './route'
 app.use('/route', routeRouter)
 
 import { umbrellaRouter } from './umbrella'
