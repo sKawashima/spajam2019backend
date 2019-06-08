@@ -2,8 +2,8 @@ import * as mongoose from 'mongoose'
 
 const FavoriteSchema = new mongoose.Schema({
   user: String,
-  longitude: String,
-  latitude: String,
+  longitude: Number,
+  latitude: Number,
   date: Date
 })
 

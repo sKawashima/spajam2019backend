@@ -1,3 +1,6 @@
 {
-  "alias": "raise-up"
+  "alias": "raise-up",
+  "env": {
+    "MONGODB_URI": "mongodb+srv://mongo:2vpFSevtWpbPqF5F@cluster0-vbb6l.gcp.mongodb.net/test?retryWrites=true&w=majority"
+  }
 }
