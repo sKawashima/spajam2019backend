@@ -36,3 +36,10 @@ routeRouter.get('/last', (_req, res) => {
       res.json(routes)
     })
 })
+
+routeRouter.get('/:user', (req, res) => {
+  RouteModel.find({ 'user': req.params.user })
+    .then((routes: string[]) => {
+      res.json(routes)
+    })
+})
