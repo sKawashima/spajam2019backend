@@ -17,4 +17,7 @@ app.get('/', (req, res) => res.send('Hello Express'))
 import {favoriteRouter} from './favorite'
 app.use('/favorite', favoriteRouter)
 
+import {routeRouter} from './route'
+app.use('/route', routeRouter)
+
 app.listen(port, () => console.log(`Server Up.`))
