@@ -1,0 +1,10 @@
+html
+  head
+    title UserID
+  body(style='display: flex;justify-content:center;align-items:center;')
+    h1(style='font-size:4em; color:#333;')= user
+    script.
+      console.log(`reloaded: ${new Date()}`)
+      window.setTimeout(() => {
+        location.reload();
+      }, 10000)
