@@ -24,4 +24,7 @@ app.use('/route', routeRouter)
 import { umbrellaRouter } from './umbrella'
 app.use('/umbrella', umbrellaRouter)
 
+import { testRouter } from './test'
+app.use('/test', testRouter)
+
 app.listen(port, () => console.log(`Server Up.`))
